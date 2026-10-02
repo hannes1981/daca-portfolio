@@ -27,4 +27,7 @@ Soovitan Toomasel enne finantsaruannete kinnitamist täpsustada, kuidas kassa- j
 
 ## Päringu tulemuste pilt
 
-![Supabase tulemused](week1_results_screenshot.png)
+![Supabase tulemused](week1_result_1.jpg) (week1_result_2.jpg) (week1_result_3.jpg) (week1_results_screenshot.jpg)
+
+
+
