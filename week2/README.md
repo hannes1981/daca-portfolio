@@ -13,5 +13,5 @@ Auditeerisin ja puhastasin tabelit `customers_test`.
 
 ## Kausta sisu
 - [`individual/week2_customers_report.md`](week2_customers_report.md) – Kliendiandmete auditiraport.
-- [`individual/week2_customers_cleaning.sql`](individual/week2_customers_cleaning.sql) – SQL-päringud andmete kontrolliks ja puhastamiseks.
+- [`individual/week2_customers_cleaning.sql`](week2_customers_cleaning.sql) – SQL-päringud andmete kontrolliks ja puhastamiseks.
 - `team/` – Meeskonna ühine koondraport.
