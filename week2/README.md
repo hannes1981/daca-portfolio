@@ -1,6 +1,6 @@
 # Kliendiandmete puhastamise raport (Roll B)
 
-**Autor:** [Sinu Nimi]  
+**Autor:** Hannes Saarmets  
 **Tabel:** `customers_test`  
 **Kuupäev:** 08.10.2026  
 
@@ -10,7 +10,7 @@
 
 | Kategooria | Leitud probleeme | Kirjeldus |
 | :--- | :--- | :--- |
-| **Duplikaatsed e-mailid** | [arv] | Korduvad e-posti aadressid tabelis |
+| **Duplikaatsed e-mailid** | 128 | Korduvad e-posti aadressid tabelis |
 | **NULL / tühi eesnimi** | [arv] | Puuduv kliendi eesnimi |
 | **NULL / tühi perenimi** | [arv] | Puuduv kliendi perenimi |
 | **Ebajärjekindlad linnanimed** | [arv] | Erinevad nimekujud (nt "tallinn" vs "Tallinn") |
