@@ -15,6 +15,3 @@ Auditeerisin ja puhastasin tabelit `customers_test`.
 - [`individual/week2_customers_report.md`](individual/week2_customers_report.md) – Kliendiandmete auditiraport.
 - [`individual/week2_customers_cleaning.sql`](individual/week2_customers_cleaning.sql) – SQL-päringud andmete kontrolliks ja puhastamiseks.
 - `team/` – Meeskonna ühine koondraport.
-Kopeeri see tekst otse oma portfolio/week-2/README.md faili. Sellega on sinu individuaalsed failid täpselt nõuetele vastavalt vormistatud!
-💬 Kui teete tiimikaaslastega kokkusaamise, siis võid oma 30-sekundilises kokkuvõttes rääkida täpselt need samad 3 numbrit ette.
-Vaatame ka teiste rollide ülesandeid
