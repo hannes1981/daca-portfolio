@@ -31,11 +31,14 @@ st.markdown(
 )
 
 # Roll B: Juhtide kokkuvõte / Narratiiv
+
 st.info(
-    "**Juhtide kokkuvõte (Tartu kauplus):** Tartu on UrbanStyle'i teine esinduskauplus, "
-    "kui andmed näitavad mõningast langustrendi (~ -5%). TOP toodete analüüs näitab "
-    "nõudluse koondumist põhikategooriatesse. Soovitame läbi viia kohaliku turunduskampaania "
-    "ning vaadata üle tootevalik ostukorvi suurendamiseks."
+    "**Juhtide kokkuvõte (Tartu kauplus):** "
+    "Tartu kauplus teenis perioodil 2023–2024 kokku 489 361 € käivet "
+    "1682 tellimusest. Keskmine tellimuse väärtus oli 290,94 €. "
+    "Müügitulu kõigub kuude lõikes märkimisväärselt ning mitmed perioodid "
+    "jäävad alla seatud eesmärgijoone. Soovitame analüüsida nõrgemaid "
+    "müügiperioode ning tugevdada kohalikke turundustegevusi."
 )
 
 # ---------------------------------------------------------
