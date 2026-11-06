@@ -9,12 +9,30 @@ st.set_page_config(layout="wide")
 # ---------------------------------------------------------
 # Kasuta täielikku liidetud CSV faili (või data_loader funktsiooni)
 df = pd.read_csv("tartu_dashboard_full.csv")
+df_products = pd.read_csv("products_rows.csv")
 # Veendu kuupäeva formaadis ja filtreeri ainult Tartu kauplus
 df["sale_date"] = pd.to_datetime(df["sale_date"])
+
+df = df.merge(
+    df_products[["product_id", "product_name"]],
+    on="product_id",
+    how="left"
+)
+
 df_tartu = df[
     (df["store_location"] == "Tartu")
     & (df["sale_date"].dt.year <= 2024)
 ].copy()
+
+top_products = (
+df_tartu.groupby("product_name")["total_price"]
+.sum()
+.sort_values(ascending=False)
+.head(5)
+.reset_index()
+)
+
+
 # ---------------------------------------------------------
 # 2. DÜNAAMILISED KPI ARVUTUSED
 # ---------------------------------------------------------
@@ -136,6 +154,18 @@ if not df_monthly.empty:
         ay=-40,
     )
 
+max_row = df_monthly.loc[df_monthly["total_price"].idxmax()]
+fig_line.add_annotation(
+x=max_row["sale_date"],
+y=max_row["total_price"],
+text="Kõrgeim müügikuu",
+showarrow=True,
+arrowhead=2,
+arrowcolor="#6C587D",
+ax=0,
+ay=-40,
+)
+    
 fig_line.update_layout(
     height=400,
     font=dict(size=14),
@@ -148,10 +178,44 @@ fig_line.update_layout(
 # 6. DIAGRAMM 2: TOP 5 TOOTED TARTUS
 # ---------------------------------------------------------
  
+fig_products = px.bar(
+    top_products,
+    x="total_price",
+    y="product_name",
+    orientation="h",
+    title="TOP 5 toodet Tartus",
+    template="plotly_white",
+)
+
+fig_products.update_traces(marker_color="#A88CAA")
+# ---------------------------------------------------------
+# 7. TEINE DIAGRAMM - MAKSEVIISID
+# ---------------------------------------------------------
+
+payment_counts = (
+    df_tartu["payment_method"]
+    .value_counts()
+    .reset_index()
+)
+
+payment_counts.columns = ["Makseviis", "Tehingud"]
+
+fig_payment = px.bar(
+    payment_counts,
+    x="Makseviis",
+    y="Tehingud",
+    title="Makseviiside jaotus Tartus",
+    template="plotly_white",
+)
+
+fig_payment.update_traces(marker_color="#A88CAA")
 
 # ---------------------------------------------------------
-# 7. VAATE KUVAMINE KAHE VEERUNA
+# 8. GRAAFIKUTE KUVAMINE
 # ---------------------------------------------------------
-col_left, col_right = st.columns(2)
 
 st.plotly_chart(fig_line, use_container_width=True)
+
+st.plotly_chart(fig_payment, use_container_width=True)
+
+st.plotly_chart(fig_products, use_container_width=True)
