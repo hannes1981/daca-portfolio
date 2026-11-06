@@ -73,8 +73,8 @@ with col1:
         border-radius:10px;
         border-left:6px solid #A88CAA;">
         <p style="margin:0;color:#6C587D;">💰 Kogutulu (Tartu)</p>
-        <h2 style="margin:0;color:#2F3443;">{total_revenue:,.0f} €</h2>
-    </div>
+        <h2 style="margin:0;color:#2F3443;">{total_revenue/1000:.0f}k €</h2>
+        </div>
     """,
         unsafe_allow_html=True,
     )
