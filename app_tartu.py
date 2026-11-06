@@ -174,7 +174,7 @@ fig_line.update_layout(
     title_font=dict(size=20),
 )
 
-fig_line.update_yaxes
+fig_line.update_yaxes(tickformat=".0s")
 
 # ---------------------------------------------------------
 # 6. DIAGRAMM 2: TOP 5 TOOTED TARTUS
