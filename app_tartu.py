@@ -174,6 +174,8 @@ fig_line.update_layout(
     title_font=dict(size=20),
 )
 
+fig_line.update_yaxes
+
 # ---------------------------------------------------------
 # 6. DIAGRAMM 2: TOP 5 TOOTED TARTUS
 # ---------------------------------------------------------
@@ -188,6 +190,7 @@ fig_products = px.bar(
 )
 
 fig_products.update_traces(marker_color="#A88CAA")
+fig_products.update_xaxes(tickformat=".0s")
 # ---------------------------------------------------------
 # 7. TEINE DIAGRAMM - MAKSEVIISID
 # ---------------------------------------------------------
